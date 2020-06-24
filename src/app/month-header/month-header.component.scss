@@ -1,0 +1,47 @@
+.navigator {
+  display: flex;
+  border: 1px solid black;
+  min-height: 35px;
+}
+
+.gotoMonth {
+  display: flex;
+  flex: .1;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+  }
+  &.previous {
+    color: darkorange;
+    font-weight: 600;
+  }
+
+  &.next {
+    color: darkolivegreen;
+    font-weight: 600;
+  }
+}
+
+
+.titles {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  #monthSelectorDropdown {
+    width: 150px;
+    padding: 2px 5px;
+    font-size: 20px;
+  }
+  .year {
+    font-size: 22px;
+    margin-bottom: 9px;
+    &:hover {
+      cursor: pointer;
+      color: blueviolet;
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+<div class="navigator">
+    <div class="gotoMonth previous" (click)="gotoPrevMonth()"> << </div>
+    <div class="titles">
+        <div ngbDropdown class="month d-inline-block">
+          <button
+            id="monthSelectorDropdown"
+            class="btn btn-outline-primary"
+            ngbDropdownToggle
+          >
+          {{monthName(month) | titlecase}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="monthSelectorDropdown">
+          <div *ngFor="let eachMonth of allMonths">
+            <button class="monthSelector_month"
+              ngbDropdownItem
+              (click)="monthSelector(eachMonth)"
+            >
+              {{monthName(eachMonth) | titlecase}}
+            </button>
+          </div>
+        </div>
+        </div>
+        <span class="year" (click)="yearSelector()"> {{year}} </span>
+    </div>
+    <div class="gotoMonth next" (click)="gotoNextMonth()"> >> </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Month } from './month.enum';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'jCalendar';
+  month = Month.JUNE;
+  year = 2020;
 }
